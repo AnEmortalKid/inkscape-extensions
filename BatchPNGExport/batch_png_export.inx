@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Batch PNG Export</name>
+  <id>com.snoutical.export.batchpng</id>
+  <category>Export</category>
+  <param name="base_name" type="string" _gui-text="Base filename">icon</param>
+  <param name="sizes" type="string" _gui-text="Sizes (comma-separated)">16,32,64</param>
+  <!-- a folder picker -->
+  <param name="output_dir" type="path" mode="folder" gui-text="Output folder:">exports</param>
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu _name="Export"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">batch_png_export.py</command>
+  </script>
+</inkscape-extension>
